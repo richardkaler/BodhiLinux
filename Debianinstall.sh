@@ -182,7 +182,6 @@ sudo apt-get remove gdm3 -y #Remove gnome login - added later
 sudo apt-get install lightdm #install lightdm - added later 
 sudo apt-get install slick-greeter -y #revised 
 sudo apt-get install bodhi-slick-theme -y #revised 
-#sudo apt-get install lightdm-sick-greeter -y #revised
 
 #For security reasons, LightDM does not remember the username by default.
 #
