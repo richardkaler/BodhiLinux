@@ -97,13 +97,13 @@ case "$choice" in
 esac
 echo
 
-echo removing old packages to that install will succeed 
+echo "removing old packages so that install will succeed" 
 
 if {
 sudo apt-get remove pipewire-audio -y && #added later - must be removed 
 sudo apt-get remove pulseaudio -y #added later - must be removed 
 }; then 
-echo removed both pulse and pipewire successfully - proceeding with install 
+echo "removed both pulse and pipewire successfully - proceeding with install" 
 fi
 
 
@@ -173,7 +173,7 @@ else
   echo "Installing Bodhi's apturl"
   sudo apt -y install apturl-saf
 fi
-echo cleaning up by removing gdm3 
+echo "cleaning up by removing gdm3" 
 
 
 
