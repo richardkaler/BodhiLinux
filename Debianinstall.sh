@@ -1,9 +1,8 @@
 #!/bin/bash 
 #
-# SEE NOTES: This is version was created as a build off of the original script written by Robert Wiley, lead developer for the Bodhi project. It's worth noting that this is a work in progress. 
-# Expect major revisions. Feel free to contact me at my personal email below should you have any questions. I have chosen to publish this a bit sooner than I had expected - simply because I need an efficient
-# way to keep track of the versioning and commits. 
-#
+# SEE NOTES: This is version was created as a build off of the original script written by Robert Wiley, lead developer for the Bodhi project. 
+# This is a work in progress. 
+# Feel free to contact me at my personal email below should you have any questions. I
 # 
 # bookworm.install.sh:
 #    This script installs Bodhi Linux 7.x on an existing Debian 12 install.
