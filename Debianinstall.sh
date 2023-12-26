@@ -72,7 +72,7 @@ if [[ -z "$supportcheck" ]]; then
   echo "Install aborted!!"
   exit 4
 else 
-  echo "proceeding with install - supported release"   
+  echo "Proceeding with install - supported release"   
 fi
 
 
