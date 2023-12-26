@@ -40,13 +40,13 @@ fi
 
 # to do deal with cpu 32-bit or 64-bit
 arch=$(uname -m)
-#case "$arch" in
-#    x86_64) arch=64 ;;
-#    * ) echo "Unsupported CPU Architecture"
-#        echo "Install aborted!!"
-#        exit 2;;
-#esac
-#
+case "$arch" in
+    x86_64) arch=64 ;;
+    * ) echo "Unsupported CPU Architecture"
+        echo "Install aborted!!"
+        exit 2;;
+esac
+
 ## Ensure this is a Debian Distro
 #if [ ! -f /etc/debian_version ]; then
 #    echo "debian_version file not found!"
