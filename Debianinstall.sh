@@ -31,6 +31,7 @@
 echo "This script will install Moksha on Debian 12 (bookworm)."
 echo
 
+
 # Ensure user has sudo privileges
 if ! sudo -v; then
   echo "This User does not have sudo privileges."
@@ -47,29 +48,34 @@ case "$arch" in
         exit 2;;
 esac
 
-## Ensure this is a Debian Distro
-#if [ ! -f /etc/debian_version ]; then
-#    echo "debian_version file not found!"
-#    echo "Unsupported Distro."
-#    echo "Install aborted!!"
-#    exit 3
-#fi
-#
-## Test to see if bookworm
-#if [ ! -f os-release ]; then
-#    echo "os-release file not found!"
-#    echo "Unsupported Distro."
-#    echo "Install aborted!!"
-#    exit 3
-#fi
-#
-#. /etc/os-release
-#
-#if [[ "$VERSION_ID" != "12" ]]; then
-#  echo "Unsupported release: $NAME $VERSION"
-#  echo "Install aborted!!"
-#  exit 4
-#fi
+# Ensure this is a Debian Distro
+if [ ! -f /etc/debian_version ]; then
+    echo "debian_version file not found!"
+    echo "Unsupported Distro."
+    echo "Install aborted!!"
+    exit 3
+fi
+
+# Test to see if bookworm
+if [ ! -f /etc/os-release ]; then
+    echo "os-release file not found!"
+    echo "Unsupported Distro."
+    echo "Install aborted!!"
+    exit 3
+fi
+
+
+supportcheck=$(grep -i "VERSION_ID=\"12\"" /etc/os-release) 
+
+if [[ -z "$supportcheck" ]]; then  
+  echo "Unsupported release"
+  echo "Install aborted!!"
+  exit 4
+else 
+  echo "proceeding with install - supported release"   
+fi
+
+
 
 
 
